@@ -1,26 +1,6 @@
 ---
 ---
 $(function() {
-    var xurl = 'https://www.cuidadodesalud.gov/es/';
-    
-    // Cross-domain request for translated version of current page
-    if ($.browser.msie && xDomain) {
-        var xdr = new XDomainRequest();
-        xdr.open('GET', xurl);
-        xdr.onload = function () {
-            $('body').empty().html('success');
-        };
-        xdr.send();
-    } else {
-        $.ajax({
-            url: xurl,
-            type: 'HEAD',
-            success: function(){
-                $('body').empty().html('success');
-            }
-        });
-    }
-    
     var BASE_URL = 'http://open.undp.org/',
         widgetOts = [],
         models = {},
